@@ -2,6 +2,7 @@ import { cookies } from 'next/headers'
 
 import { AliasField } from '@/components/AliasField'
 import { DownloadConfigButton } from '@/components/DownloadConfigButton'
+import { ResetConfigButton } from '@/components/ResetConfigButton'
 import { Command } from '@/constants/Commands'
 
 export default function Home() {
@@ -22,7 +23,10 @@ export default function Home() {
           <AliasField alias={alias} description={description} id={id} key={id} name={name} />
         ))}
       </div>
-      <DownloadConfigButton />
+      <div className='ms-auto flex gap-3'>
+        <ResetConfigButton />
+        <DownloadConfigButton />
+      </div>
     </main>
   )
 }

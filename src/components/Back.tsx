@@ -7,7 +7,7 @@ export const Back = () => {
   const router = useRouter()
 
   useEffect(() => {
-    router.back()
+    router.push('/')
   }, [router])
 
   return null

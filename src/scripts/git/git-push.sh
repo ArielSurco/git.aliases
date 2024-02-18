@@ -1,4 +1,4 @@
 ### git-push ###
 # Normal git push
 alias push="git push"
-__git_complete push _git_push
+__git_complete push _git_push 2>/dev/null

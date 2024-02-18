@@ -26,7 +26,7 @@ export const commands: Command[] = [
     id: 'git-amend',
     name: 'git commit --amend',
     description: 'Amend the last commit',
-    alias: 'am',
+    alias: 'amend',
     dependencies: [],
   },
   {
@@ -34,14 +34,14 @@ export const commands: Command[] = [
     name: 'git pull',
     description:
       'Fetch branches and/or tags from the repository and merge them into local branches',
-    alias: 'pl',
+    alias: 'pull',
     dependencies: [],
   },
   {
     id: 'git-pull-current-branch',
     name: 'git pull origin {currentBranch}',
     description: 'Fetch branch and merge it into the current branch',
-    alias: 'plc',
+    alias: 'pullc',
     dependencies: ['current-branch'],
   },
   {
@@ -75,8 +75,50 @@ export const commands: Command[] = [
   {
     id: 'git-unstage',
     name: 'git restore --staged',
-    description: 'Unstage changes',
+    description: 'Discard changes in the staging area',
     alias: 'unstage',
+    dependencies: [],
+  },
+  {
+    id: 'git-restore',
+    name: 'git restore',
+    description: 'Discard changes in working directory',
+    alias: 'restore',
+    dependencies: [],
+  },
+  {
+    id: 'git-switch',
+    name: 'git switch',
+    description: 'Switch branches',
+    alias: 'sw',
+    dependencies: [],
+  },
+  {
+    id: 'git-diff',
+    name: 'git diff',
+    description: 'Show changes between commits, commit and working tree, etc',
+    alias: 'df',
+    dependencies: [],
+  },
+  {
+    id: 'git-merge',
+    name: 'git merge',
+    description: 'Merge branches',
+    alias: 'mg',
+    dependencies: [],
+  },
+  {
+    id: 'git-rebase',
+    name: 'git rebase',
+    description: 'Reapply commits on top of another base tip',
+    alias: 'rebase',
+    dependencies: [],
+  },
+  {
+    id: 'git-add',
+    name: 'git add',
+    description: 'Add files to the staging area',
+    alias: 'add',
     dependencies: [],
   },
 ]

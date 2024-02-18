@@ -12,12 +12,17 @@ export const metadata: Metadata = {
   description: 'Webapp to create aliases to commands in Bash for Git',
 }
 
-export default function RootLayout({ children, editModal }: Layout<'editModal'>) {
+export default function RootLayout({
+  children,
+  editModal,
+  nextSteps,
+}: Layout<'editModal' | 'nextSteps'>) {
   return (
     <html lang='en'>
       <body className={inter.className}>
         {children}
         {editModal}
+        {nextSteps}
       </body>
     </html>
   )

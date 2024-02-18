@@ -15,3 +15,7 @@ export const editAlias = async (commandId: string, newAlias: string) => {
 
   cookies().set('commands', JSON.stringify(commands))
 }
+
+export const resetCommands = async () => {
+  cookies().set('commands', JSON.stringify(defaultCommands))
+}
